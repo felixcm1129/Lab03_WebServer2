@@ -2,7 +2,7 @@
 
 <b style="font-size:25px">Liste des Recettes: </b> <br />
 <ul>
-    <% @recettes.sort_by(&:titre).each do |r| %>
+    <% @recettes.each do |r| %>
         <li>
             <%= r.titre %>
             <%= link_to 'html', "/recettes/#{r.id}" %><br />
