@@ -1,0 +1,8 @@
+<h1> <%= @recettes[0].titre %> </h1>
+<b>Étapes:</b> <%= @recettes[0].etapes %> <br />
+<b>Ingrédients:</b> <% @recettes[0].ingredients.each do |i| %> <%= i.recette_ingredients[0].quantite.to_s + i.recette_ingredients[0].unite + " " + i.nom + ", " %>
+<% end %>
+
+
+    
+

@@ -1,0 +1,13 @@
+<h1 style="font-size:50px">Page d'accueil</h1>
+
+<b style="font-size:25px">Liste des Recettes: </b> <br />
+<ul>
+    <% @recettes.sort_by(&:titre).each do |r| %>
+        <li>
+            <%= r.titre %>
+            <%= link_to 'html', "/recettes/#{r.id}" %><br />
+            <%= link_to 'json', "/recettes/#{r.id}.json" %><br />
+            <%= link_to 'xml', "/recettes/#{r.id}.xml" %><br />
+        </li>
+    <% end %>
+</ul>

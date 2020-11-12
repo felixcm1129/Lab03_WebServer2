@@ -1,0 +1,19 @@
+<h1 style="font-size:50px">Admin Gestion Recettes</h1>
+<b style="font-size:25px">Liste des Recettes: </b> <br />
+<ul>
+    <% @users.each do |u| %>
+        <%if u.recettes.size > 0%>
+            <li>
+                User: <%= u.id%><br />
+            </li>
+            <ul>
+                <% u.recettes.each do |u_r|%>
+                    <li>
+                        <%= u_r.titre %>
+                        <%= link_to 'lien', "/admin/recettes/#{u_r.id}/God" %><br />
+                    </li>
+                <% end %>
+            </ul>
+        <%end%>
+    <% end %>
+</ul>
