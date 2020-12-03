@@ -1,11 +1,14 @@
 class User < ApplicationRecord
+  # Include default devise modules. Others available are:
+  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :validatable, :confirmable
   # Relations
   has_many :recettes
 
   # Validations
   validates :email, uniqueness: true, presence: true
   validate :valide_email # Voir la méthode privée du même nom
-  validates :nom, :prenom, presence: true
 
   # Fonctionnalité privé au modèle
   private

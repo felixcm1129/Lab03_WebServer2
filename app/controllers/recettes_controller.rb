@@ -1,6 +1,6 @@
 #Félix Carle-Milette 2020-11-03
 class RecettesController < ApplicationController
-    before_action :get_recettes
+    before_action :get_recettes, :authenticate_user!
 
     def show
         respond_to do |format|

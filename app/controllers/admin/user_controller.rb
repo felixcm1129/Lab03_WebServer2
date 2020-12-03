@@ -8,6 +8,11 @@ class Admin::UserController < AdminController
             format.xml
         end   
     end
+
+    
+    def get_users
+        @users = User.joins(:recettes).distinct
+    end
     
     
 end

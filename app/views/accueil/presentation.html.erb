@@ -4,10 +4,10 @@
 <ul>
     <% @recettes.each do |r| %>
         <li>
-            <%= r.titre %>
-            <%= link_to 'html', "/recettes/#{r.id}" %><br />
-            <%= link_to 'json', "/recettes/#{r.id}.json" %><br />
-            <%= link_to 'xml', "/recettes/#{r.id}.xml" %><br />
+            <%= r.titre %><br/>
+            <%= link_to 'lien html', "/recettes/#{r.id}" %><br />
+            <%= link_to 'lien json', "/recettes/#{r.id}.json" %><br />
+            <%= link_to 'lien xml', "/recettes/#{r.id}.xml" %><br />
         </li>
     <% end %>
 </ul>
