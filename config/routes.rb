@@ -2,9 +2,9 @@
 Rails.application.routes.draw do
   devise_for :users
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  root 'accueil#presentation'
+  root to: 'accueil#menu'
 
-  get '/recettes/:id', to: 'recettes#show', as: 'recettes'
+  get '/mesrecettes/', to: 'recettes#show', as: 'recettes'
 
   namespace :admin do
     get '/recettes/:is_admin', to: 'user#show'
