@@ -1,14 +1,11 @@
 <!--Félix Carle-Milette 2020-12-03-->
 <h1>Mes Recettes</h1>
 <% @recettes.each do |r| %>
-    <h2> <%= r.titre %> </h1>
+    <h2> <%= r.titre %> </h2>
     <b>Étapes:</b> <%= r.etapes %> <br />
     <b>Ingrédients:</b> 
     <% r.ingredients.each do |i| %> 
         <%= i.recette_ingredients[0].quantite.to_s + i.recette_ingredients[0].unite + " " + i.nom + ", " %>
         <br />
     <% end %>
-    <%= link_to 'lien html', "/recettes/#{r.id}" %><br />
-    <%= link_to 'lien json', "/recettes/#{r.id}.json" %><br />
-    <%= link_to 'lien xml', "/recettes/#{r.id}.xml" %><br />
 <% end %>

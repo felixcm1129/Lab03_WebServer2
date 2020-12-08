@@ -1,12 +1,2 @@
 <!--Félix Carle-Milette 2020-12-03-->
 <h1 style="font-size:50px">Page d'accueil</h1>
-<% if user_signed_in? %>
-    <%= link_to 'Mes recettes', recettes_path %>
-    <%= link_to 'Admin', "admin/recettes/is_admin" %>
-    <%= link_to 'logout', destroy_user_session_path, method: "delete" %>
-<% else %>
-    <%= link_to 'login', new_user_session_path %>
-<% end %>
-<hr />
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
