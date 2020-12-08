@@ -4,8 +4,12 @@ class AdminController < ApplicationController
   
   private
   def is_admin?
-    unless current_user.email == "felixcm1129@hotmail.ca"
+    unless current_user.admin == true
       redirect_to '/'
     end
+  end
+
+  def get_recettes_id 
+    @recettes = Recette.find(params[:id])
   end
 end

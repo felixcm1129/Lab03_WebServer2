@@ -11,7 +11,7 @@ george = User.create!(nom: "George", prenom: "Germain", email: "george@germain.c
 jacque = User.create!(nom: "Jacque", prenom: "Germain", email: "jacque@germain.com", password: "jacqueGermain")
 daniel = User.create!(nom: "Daniel", prenom: "Peterson", email: "daniel@peterson.com", password: "danielPeterson")
 robert = User.create!(nom: "Robert", prenom: "Skywalker", email: "robert@skywalker.com", password: "robertSkywalker")
-admin = User.create!(nom: "Félix", prenom:"Carle-Milette", email: "felixcm1129@hotmail.ca", password: "951bfsm")
+admin = User.create!(nom: "Félix", prenom:"Carle-Milette", email: "felixcm1129@hotmail.ca", password: "951bfsm", admin: true)
 
 oeuf = Ingredient.create!(nom: "Oeuf", unite_defaut: "unite")
 lait = Ingredient.create!(nom: "Lait", unite_defaut: "ml")
