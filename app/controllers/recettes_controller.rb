@@ -9,8 +9,4 @@ class RecettesController < ApplicationController
             format.xml{render 'recettes/show.xml'}
         end
     end
-
-    def get_recettes
-        @recettes = current_user.recettes
-    end
 end

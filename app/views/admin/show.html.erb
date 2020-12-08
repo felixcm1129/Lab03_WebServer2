@@ -10,7 +10,7 @@
             <% u.recettes.each do |u_r|%>
                 <li>
                     <%= u_r.titre %>
-                    <%= link_to 'lien', "/admin/recettes/#{u_r.id}/God" %><br />
+                    <%= link_to 'lien', "/admin/recettes/#{u_r.id}/:is_admin" %><br />
                 </li>
             <% end %>
         </ul>

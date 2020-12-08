@@ -8,4 +8,7 @@
         <%= i.recette_ingredients[0].quantite.to_s + i.recette_ingredients[0].unite + " " + i.nom + ", " %>
         <br />
     <% end %>
+    <%= link_to 'lien html', "/recettes/#{r.id}" %><br />
+    <%= link_to 'lien json', "/recettes/#{r.id}.json" %><br />
+    <%= link_to 'lien xml', "/recettes/#{r.id}.xml" %><br />
 <% end %>

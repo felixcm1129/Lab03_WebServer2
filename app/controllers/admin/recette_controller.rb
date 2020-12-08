@@ -1,5 +1,5 @@
 class Admin::RecetteController < AdminController
-    before_action :get_recettes
+    before_action :get_recettes_id
 
     def recette
         respond_to do |format|
